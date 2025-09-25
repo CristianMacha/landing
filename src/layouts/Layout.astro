@@ -1,4 +1,6 @@
 ---
+import '../styles/landing.css';
+
 export interface Props {
 	title: string;
 	description: string;
@@ -33,9 +35,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;700&family=Oswald:wght@700&display=swap" rel="stylesheet">
-
-		<!-- Styles -->
-		<link rel="stylesheet" href="/src/styles/landing.css">
 
 		<!-- Structured Data -->
 		<script type="application/ld+json" set:html={`
