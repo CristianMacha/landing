@@ -1,0 +1,262 @@
+
+:root {
+    --background-color: #f8f9fa;
+    --text-color: #212529;
+    --heading-font: 'Oswald', sans-serif;
+    --body-font: 'Inter', sans-serif;
+    --gradient-start: #f86fc7;
+    --gradient-end: #8273f2;
+    --highlight-color: #e09746;
+    --card-bg: rgba(255, 255, 255, 0.85);
+    --card-border: rgba(255, 255, 255, 0.6);
+    --shadow: 0 4px 12px 0 rgba(31, 38, 135, 0.1);
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--body-font);
+    margin: 0;
+    line-height: 1.6;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.highlight {
+    color: var(--highlight-color);
+    animation: color-shift 5s linear infinite;
+}
+
+@keyframes color-shift {
+    0% { color: #e09746; }
+    50% { color: #f86fc7; }
+    100% { color: #e09746; }
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    background-image: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(130, 115, 242, 0.3);
+}
+
+/* Glassmorphism Card */
+.glass-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 1.5rem;
+    border: 1px solid var(--card-border);
+    box-shadow: var(--shadow);
+    padding: 3rem;
+}
+
+section {
+    padding: 5rem 2rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    margin-bottom: 1.5rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+}
+
+/* Pros & Cons Section */
+.pros-cons-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.pros-cons-container .column {
+    padding: 2rem;
+}
+
+.pros-cons-container h2 {
+    font-size: 2.5rem;
+    text-align: left;
+}
+
+.pros-cons-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.pros-cons-container li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.pros-cons-container svg {
+    width: 24px;
+    height: 24px;
+    color: var(--gradient-end);
+}
+
+/* Comparison Table */
+.table-container {
+    overflow-x: auto;
+}
+
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.table-container th, .table-container td {
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--card-border);
+}
+
+.table-container th {
+    font-family: var(--heading-font);
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+}
+
+.table-container tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* FAQ Section */
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-container details {
+    border-bottom: 1px solid var(--card-border);
+    margin-bottom: 1rem;
+    padding: 1.5rem 0;
+}
+
+.faq-container summary {
+    font-weight: bold;
+    font-size: 1.3rem;
+    cursor: pointer;
+    list-style: none;
+}
+
+.faq-container summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-container p {
+    margin-top: 1rem;
+}
+
+/* Local SEO Section */
+.local-seo-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.map-container img {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.info-container h2 {
+    text-align: left;
+}
+
+.info-container ul {
+    list-style: none;
+    padding: 0;
+    columns: 2;
+}
+
+/* Testimonials */
+.testimonials-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.testimonial {
+    background: transparent;
+    border: 1px solid var(--card-border);
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+/* Footer */
+.footer-section {
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .local-seo-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 3rem 1rem;
+    }
+    .pros-cons-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .glass-card {
+        padding: 2rem;
+    }
+}
