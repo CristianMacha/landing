@@ -4,6 +4,6 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://graniteimpressions.com',
+  site: 'https://granite-impressions.com',
   integrations: [sitemap()],
 });
